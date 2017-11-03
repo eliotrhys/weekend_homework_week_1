@@ -41,7 +41,7 @@ def find_pet_by_name(shop, name)
       return pets
     end
   end
-  puts pets
+  puts pets.to_s
 end
 
 def remove_pet_by_name(shop, name)
@@ -75,8 +75,8 @@ def customer_can_afford_pet(customer, new_pet)
   end
 end
 
-def sell_pet_to_customer(shop, pet, customer)
-
+def sell_pet_to_customer(shop, pet, craig)
+  pet.push(customer[:pets])
 
 
 
