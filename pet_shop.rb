@@ -14,6 +14,43 @@ def pets_sold(shop)
   return shop[:admin][:pets_sold]
 end
 
-def increase_pets_sold
-  
+def increase_pets_sold(shop, pets)
+  shop[:admin][:pets_sold] += pets
 end
+
+def stock_count(shop)
+  value = shop[:pets].length
+  return value
+end
+
+def pets_by_breed(shop, breed)
+  pets = []
+  for breed_type in shop[:pets]
+    if breed_type[:breed] == breed
+      pets.push(breed_type[:breed])
+    end
+  end
+  return pets
+end
+
+def find_pet_by_name(shop, name)
+  pets = {}
+  for name_type in shop[:pets]
+    if name == name_type[:name]
+      pets = {name: name}
+      # pets.push{name_type[:name]}
+      return pets
+    end
+  end
+  puts pets
+end
+
+# def find_pet_by_name(shop, name)
+#   pets = {}
+#   for name_type in shop[:pets]
+#     if name_type[:name].include?(name)
+#       pets << shop[:pets][:name]
+#       return pets
+#     end
+#   end
+# end
