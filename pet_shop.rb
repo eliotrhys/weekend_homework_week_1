@@ -38,19 +38,19 @@ def find_pet_by_name(shop, name)
   for name_type in shop[:pets]
     if name == name_type[:name]
       pets = {name: name}
-      # pets.push{name_type[:name]}
       return pets
     end
   end
   puts pets
 end
 
-# def find_pet_by_name(shop, name)
-#   pets = {}
-#   for name_type in shop[:pets]
-#     if name_type[:name].include?(name)
-#       pets << shop[:pets][:name]
-#       return pets
-#     end
-#   end
-# end
+def remove_pet_by_name(shop, name)
+  for remove_pet in shop[:pets]
+    if name == remove_pet[:name]
+      shop[:pets].delete(remove_pet)
+      puts name
+    end
+  end
+end
+
+#.delete(key)
