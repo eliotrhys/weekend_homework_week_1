@@ -75,10 +75,10 @@ def customer_can_afford_pet(customer, new_pet)
   end
 end
 
-def sell_pet_to_customer(shop, pet, craig)
-  pet.push(customer[:pets])
+# def sell_pet_to_customer(shop, pet, craig)
+#   pet.push(customer[:pets])
 
 
 
 
-end
+# end
